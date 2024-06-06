@@ -1,0 +1,50 @@
+Koble til MongoDB-serveren ved hjelp av en MongoDB Atlas-URI
+Velg databasen 'bussturer'
+Velg eller opprett samlingen 'turer'
+Velg eller opprett samlingen 'passasjerer'
+
+Funksjon registrer_tur():
+    Be brukeren om å skrive inn navnet på turen
+    Sett inn turen i 'turer'-samlingen
+    Skriv ut bekreftelsesmelding
+
+Funksjon registrer_passasjer():
+    Be brukeren om å skrive inn fornavn
+    Be brukeren om å skrive inn etternavn
+    Be brukeren om å skrive inn navnet på turen de vil delta på
+    Sjekk om turen eksisterer i 'turer'-samlingen
+    Hvis turen eksisterer:
+        Sett inn passasjeren i 'passasjerer'-samlingen
+        Skriv ut bekreftelsesmelding
+    Ellers:
+        Skriv ut feilmelding som indikerer at turen ikke eksisterer
+
+Funksjon list_turer():
+    Hent alle turer fra 'turer'-samlingen
+    Skriv ut overskriften "Oversikt over alle turer"
+    For hver tur i samlingen:
+        Skriv ut navnet på turen
+
+Funksjon list_passasjerer():
+    Hent alle passasjerer fra 'passasjerer'-samlingen
+    Skriv ut overskriften "Oversikt over alle påmeldte passasjerer"
+    For hver passasjer i samlingen:
+        Skriv ut fornavn, etternavn og turen de er registrert på
+
+Funksjon hovedmeny():
+    Mens sant:
+        Skriv ut menyen med alternativer
+        Be brukeren velge et alternativ
+        Hvis brukeren velger '1':
+            Kall registrer_tur()
+        Ellers hvis brukeren velger '2':
+            Kall registrer_passasjer()
+        Ellers hvis brukeren velger '3':
+            Kall list_turer()
+        Ellers hvis brukeren velger '4':
+            Kall list_passasjerer()
+        Ellers hvis brukeren velger '5':
+            Skriv ut melding "Avslutter programmet"
+            Bryt ut av løkken
+        Ellers:
+            Skriv ut feilmelding for ugyldig valg
